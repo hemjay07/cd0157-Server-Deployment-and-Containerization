@@ -12,5 +12,3 @@ RUN pip install -r requirements.txt
 
 # Define an entrypoint which will run the main app using the Gunicorn WSGI server.
 ENTRYPOINT ["gunicorn", "-b", ":8080", "main:APP"]
-    export TOKEN=`curl -X POST localhost:80/auth -d '{"email":"mujeebopabode07@gmail.com"}' -H "Content-Type: application/json" | jq -r '.token' 
-    `export TOKEN=`curl --data '{"email":"abc@xyz.com","password":"WindowsPwd"}' --header "Content-Type: application/json" -X POST localhost:80/auth  | jq -r '.token'`
